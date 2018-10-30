@@ -1,6 +1,6 @@
 # vuedemo
 
-> 这是个vue的演示项目
+> 这是个vue的视频网站
 
 ## Build Setup
 
