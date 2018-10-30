@@ -42,6 +42,18 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     quiet: true, // necessary for FriendlyErrorsPlugin
     watchOptions: {
       poll: config.dev.poll,
+    },
+    historyApiFallback: true,
+    noInfo: true,
+    overlay: true,
+    proxy: {
+      '/proxy/*': {
+        target: 'https://blog.csdn.net/',
+        changeOrigin: true,
+        pathRewrite: {
+          "/proxy/": ""
+        }
+      }
     }
   },
   plugins: [
