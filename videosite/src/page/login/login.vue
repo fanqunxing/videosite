@@ -5,22 +5,27 @@
   </div>
 </template>
 <script>
-/* eslint-disable */
-  export default {
-    computed: {
-      count() {
-        return this.$store.state.count
-      }
-    },
-    methods: {
-      add() {
-        this.$store.commit('add')
-      }
+import { mapState, mapActions } from 'vuex'
+export default {
+  computed: {
+    ...mapState({
+      count: state => state.demo.count
+    })
+  },
+  methods: {
+    ...mapActions(['querydemo']),
+    add () {
+      this.count++
+      this.$store.commit('DEMO_ADD')
     }
+  },
+  mounted () {
+    this.querydemo().then(data => {
+      console.log(data)
+    })
   }
-
+}
 </script>
 <style>
-
 
 </style>
