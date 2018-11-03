@@ -1,7 +1,7 @@
 {
   "name": "videosite",
   "version": "1.0.0",
-  "description": "这是个vue的演示项目",
+  "description": "视频网站",
   "author": "fwx426328 fanqunxing@foxmail.com",
   "private": true,
   "scripts": {
@@ -11,6 +11,8 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "mockjs": "^1.0.1-beta3",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
