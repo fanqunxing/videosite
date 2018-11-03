@@ -5,7 +5,8 @@
   </div>
 </template>
 <script>
-import { mapState, mapActions } from 'vuex'
+import { mapState, mapActions } from 'vuex';
+
 export default {
   computed: {
     ...mapState({
@@ -15,16 +16,16 @@ export default {
   methods: {
     ...mapActions(['querydemo']),
     add () {
-      this.count++
-      this.$store.commit('DEMO_ADD')
+      this.count++;
+      this.$store.commit('DEMO_ADD');
     }
   },
   mounted () {
     this.querydemo().then(data => {
-      console.log(data)
-    })
+      console.log(data);
+    });
   }
-}
+};
 </script>
 <style>
 

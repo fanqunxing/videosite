@@ -1,18 +1,16 @@
-
 export default {
   state: {
     count: 0
   },
-  getters: {
-  },
+  getters: {},
   mutations: {
     DEMO_ADD (state, data) {
-      state.count++
+      state.count++;
     }
   },
   actions: {
     async querydemo () {
-      return 'hello'
+      return 'hello';
     }
   }
-}
+};

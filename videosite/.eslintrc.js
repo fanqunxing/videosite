@@ -24,6 +24,11 @@ module.exports = {
     // allow async-await
     'generator-star-spacing': 'off',
     // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'semi': ["error", "always"], // 使用分号
+    "camelcase": 2,// 强制驼峰法命名
+    "complexity": [0, 11],// 循环复杂度
+    "eqeqeq": 2,// 必须使用全等
+    // "indent": [2, 4],//缩进风格
   }
 }
