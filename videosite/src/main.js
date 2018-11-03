@@ -5,11 +5,13 @@ import App from './App';
 import router from './router';
 import Vuex from 'vuex';
 import store from './store/store';
+import axios from 'axios';
 
+console.log(axios);
 Vue.use(Vuex);
 
 Vue.config.productionTip = false;
-/* eslint-disable */ 
+/* eslint-disable */
 new Vue({
   el: '#app',
   router,
