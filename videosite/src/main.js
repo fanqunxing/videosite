@@ -2,33 +2,21 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue';
 import Vuex from 'vuex';
-import axios from 'axios';
 import App from './App';
 import router from './router';
 import store from './store/store';
 import http from './http/index';
 
+require('./mock/index.js');
 console.log(http);
-
-Vue.use(Vuex);
-
-// axios({
-//   method: 'post',
-//   url: '/user',
-//   data: {
-//     name: 'xiaoming',
-//     info: '12'
-//   }
-// }).then(data => {
-//   console.log(data);
-// });
-
-axios({
+http({
   methods: 'post',
   url: '/video/getVideoDetail/pojo'
 }).then(data => {
   console.log(data);
 });
+
+Vue.use(Vuex);
 
 Vue.config.productionTip = false;
 /* eslint-disable */
@@ -40,4 +28,3 @@ new Vue({
   template: '<App/>'
 });
 
-// require('./mock/mock.js');
