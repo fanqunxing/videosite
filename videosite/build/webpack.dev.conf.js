@@ -47,12 +47,12 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     noInfo: true,
     overlay: true,
     proxy: {
-      '/proxy/*': {
-        target: 'https://blog.csdn.net/',
+      '/video/*': {
+        target: 'http://47.106.13.116:8080',
         changeOrigin: true,
-        pathRewrite: {
-          "/proxy/": ""
-        }
+        // pathRewrite: {
+        //   "/video/": ""
+        // }
       }
     }
   },

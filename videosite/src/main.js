@@ -6,9 +6,29 @@ import axios from 'axios';
 import App from './App';
 import router from './router';
 import store from './store/store';
+import http from './http/index';
 
-console.log(axios);
+console.log(http);
+
 Vue.use(Vuex);
+
+// axios({
+//   method: 'post',
+//   url: '/user',
+//   data: {
+//     name: 'xiaoming',
+//     info: '12'
+//   }
+// }).then(data => {
+//   console.log(data);
+// });
+
+axios({
+  methods: 'post',
+  url: '/video/getVideoDetail/pojo'
+}).then(data => {
+  console.log(data);
+});
 
 Vue.config.productionTip = false;
 /* eslint-disable */
@@ -19,3 +39,5 @@ new Vue({
   components: { App },
   template: '<App/>'
 });
+
+// require('./mock/mock.js');
