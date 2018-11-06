@@ -19,6 +19,11 @@ export default new Router({
       path: '/regist',
       name: 'regist',
       component: resolve => require(['../page/login/regist.vue'], resolve)
+    },
+    {
+      path: '/videoList',
+      name: 'videoList',
+      component: resolve => require(['../page/index/videoList.vue'], resolve)
     }
   ]
 });

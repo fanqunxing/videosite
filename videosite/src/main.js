@@ -7,7 +7,7 @@ import router from './router';
 import store from './store/store';
 import http from './http/index';
 
-require('./mock/index.js');
+// require('./mock/index.js');
 console.log(http);
 http({
   methods: 'post',
@@ -24,7 +24,8 @@ new Vue({
   el: '#app',
   router,
   store,
-  components: { App },
+  components: {
+    App
+  },
   template: '<App/>'
 });
-
