@@ -8,17 +8,16 @@ import store from './store/store';
 import http from './http/index';
 
 // require('./mock/index.js');
-console.log(http);
-http({
-  methods: 'post',
-  url: '/video/getVideoDetail/pojo'
-}).then(data => {
-  console.log(data);
-});
+// http({
+//   methods: 'post',
+//   url: '/video/getVideoDetail/pojo'
+// }).then(data => {
+//   console.log(data);
+// });
 
 Vue.use(Vuex);
-
 Vue.config.productionTip = false;
+Vue.prototype.$http = http;
 /* eslint-disable */
 new Vue({
   el: '#app',
