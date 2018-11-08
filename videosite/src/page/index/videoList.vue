@@ -15,7 +15,7 @@
       <tbody>
         <tr v-for="video in videolist" :key="video.id">
           <td>{{video.id}}</td>
-          <td>{{video.name}}</td>
+          <td><router-link to="/videoDetail">{{video.name}}</router-link></td>
         </tr>
       </tbody>
     </table>

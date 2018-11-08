@@ -24,6 +24,11 @@ export default new Router({
       path: '/videoList',
       name: 'videoList',
       component: resolve => require(['../page/index/videoList.vue'], resolve)
+    },
+    {
+      path: '/videoDetail',
+      name: 'videoDetail',
+      component: resolve => require(['../page/index/videoDetail.vue'], resolve)
     }
   ]
 });
